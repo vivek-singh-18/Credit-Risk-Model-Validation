@@ -57,7 +57,7 @@ Business Problem -> Data Quality -> EDA -> Hypothesis Testing -> Sampling -> Mod
 | :--- | :--- | :---: | :--- |
 | **Data Quality & Imputation** | Missingness was below 5%; median and mode imputation were applied within the preprocessing pipeline without target leakage. | **Low Risk** | Keep the current pipeline structure. |
 | **Data Leakage** | Features were captured at origination, and preprocessing was fit only on `X_train`. | **Low Risk** | No obvious leakage issue in this setup. |
-| **Discrimination (KS / AUC)** | Logistic Regression achieved **AUC = 0.7475 / KS = 40.43%**; XGBoost achieved **AUC = 0.6899 / KS = 30.11%**. | **Low Risk** | These are strong results for this exercise. |
+| **Discrimination (KS / AUC)** | Logistic Regression achieved **AUC = 0.7475 / KS = 40.43%**; XGBoost achieved **AUC = 0.6899 / KS = 30.11%**. | **Low Risk** | These results indicate useful discriminatory performance for this exercise. |
 | **Probability Calibration** | Logistic Regression had a Brier Score of **0.1083**; the tree models showed some overconfidence in the highest risk bins. | **Low-Medium Risk** | Recalibration could be considered if probabilities are used in a downstream loss model. |
 | **Overfitting Risk** | The train-to-test AUC gap was below 0.015 for the regularized candidate models. | **Low Risk** | Regularization appears to be working as intended. |
 | **Population Stability (PSI)** | Key risk drivers (`int_rate`, `dti`, `annual_inc`) stayed below PSI = 0.05 across the 2022 OOT sample. | **Low Risk** | The population appears relatively stable. |
@@ -77,19 +77,18 @@ Business Problem -> Data Quality -> EDA -> Hypothesis Testing -> Sampling -> Mod
 
 ## 🛠️ Reproduction & Execution Instructions
 
-1. **Open the project folder in a terminal:**
+1. **Open the project folder in a terminal or VS Code workspace:**
    ```bash
    cd "path\to\project\folder"
    ```
 
-2. **Create or activate the virtual environment and install dependencies:**
+2. **Install the project dependencies:**
    ```bash
-   .\.venv\Scripts\Activate.ps1
    pip install -r requirements.txt
    ```
 
-3. **Open and run the notebook:**
-   ```bash
-   jupyter notebook
-   ```
-   Then open `Credit_Risk_Model_Validation.ipynb` and run all cells from top to bottom.
+3. **Open the notebook and run it:**
+   - In Jupyter Notebook or VS Code, open `Credit_Risk_Model_Validation.ipynb`
+   - Run all cells from top to bottom
+
+4. **Optional:** If using a virtual environment, activate it before installing dependencies.
