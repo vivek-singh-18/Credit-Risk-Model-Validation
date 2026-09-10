@@ -77,18 +77,19 @@ Business Problem -> Data Quality -> EDA -> Hypothesis Testing -> Sampling -> Mod
 
 ## 🛠️ Reproduction & Execution Instructions
 
-1. **Navigate to Project Directory:**
+1. **Open the project folder in a terminal:**
    ```bash
-   cd "C:\Users\Vivek\OneDrive\Desktop\DA\New folder"
+   cd "path\to\project\folder"
    ```
 
-2. **Activate Environment & Install Dependencies:**
+2. **Create or activate the virtual environment and install dependencies:**
    ```bash
-   .venv\Scripts\activate
+   .\.venv\Scripts\Activate.ps1
    pip install -r requirements.txt
    ```
 
-3. **Execute Notebook Top-to-Bottom:**
+3. **Open and run the notebook:**
    ```bash
-   python execute_notebook.py
+   jupyter notebook
    ```
+   Then open `Credit_Risk_Model_Validation.ipynb` and run all cells from top to bottom.
