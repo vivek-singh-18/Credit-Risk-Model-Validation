@@ -1,0 +1,26 @@
+# Virtual environment
+.venv/
+venv/
+ENV/
+
+# Python cache & build
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# System & OS files
+.DS_Store
+Thumbs.db
+*.log
+
+# Scratch & build helper scripts (keep only notebook, README, requirements.txt, .gitignore)
+generate_notebook.py
+execute_notebook.py
+extract_and_sync.py
+update_docs.py
+quality_gate.py
+walkthrough.md
